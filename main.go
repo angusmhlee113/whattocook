@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	csvreader "WhatToCook/csvreader"
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello World")
+	fmt.Println("Initiate the CSV reader..")
+	food := csvreader.ReadCSV()
+	fmt.Println(food)
+	//Read out what is in the database 	
 }

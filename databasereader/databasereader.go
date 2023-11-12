@@ -1,0 +1,5 @@
+package databasereader
+
+func ReadDatabase() {
+
+}

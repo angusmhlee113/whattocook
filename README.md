@@ -2,7 +2,8 @@
 
 Completed Tasks:
 - CSV reader (11/12/2023) 
-- Local SQL server setup (11/12/2023) 
+- Local SQL server setup (11/12/2023)
+- ENV reader (11/13/2023)
 
 To-Do List:
 - Compare CSV with database & add missing items / remove extra items

@@ -1,4 +1,7 @@
 # What To Cook Back-End 
+Introduction to What to Cook
+An app that allow the users to upload their own CSV with their own meals in it. People within the same hub/group can order food based on what are in the CSV, and the uploader/owner of the hub/group will recieve notifciations. 
+
 
 Completed Tasks:
 - CSV reader (11/12/2023) 

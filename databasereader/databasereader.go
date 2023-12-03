@@ -1,6 +1,7 @@
 package databasereader
 
 import (
+	datatypes "WhatToCook/modals"
 	"database/sql"
 	"fmt"
 	"os"
@@ -37,6 +38,9 @@ func databaseConnection () *sql.DB{
 
 
 func ReadDatabaseAndDiff() {
+	//Create the map for the foods within the database 
+	foodmap := make(map[string]datatypes.Food)
+
 	//Read out what is in the database and return the diff between the two
 	DB := databaseConnection()
 		//SQL Data Structure
@@ -56,6 +60,12 @@ func ReadDatabaseAndDiff() {
 		err := rows.Scan(&id, &meal, &cuisine, &name)
 		if err != nil {
 			fmt.Printf("Scan failed,err:%v\n", err)
+		}
+		// Map it based on the cuisine for less resources used	
+		foodmap [cuisine] = datatypes.Food{
+			Meal: meal,
+			Cuisine: cuisine,
+			Name: name,
 		}
 		fmt.Println(id, meal, cuisine, name)
 	}
